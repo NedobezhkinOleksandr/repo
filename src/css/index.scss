@@ -1,0 +1,548 @@
+@font-face {
+  font-family: "Suisse Int";
+  src: url("../fonts/SuisseIntl-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Suisse Int";
+  src: url("../fonts/SuisseIntl-SemiBold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Wulkan Display";
+  src: url("../fonts/WulkanDisplay-SemiBoldItalic.woff") format("woff");
+}
+
+body {
+    font-family: Suisse Int;
+    max-height: 100vh;
+    background: linear-gradient(202.92deg, rgba(0, 0, 85, 0.8) 38.49%, rgba(255, 38, 126, 0.8) 81.69%);
+    background-color: rgba(0, 0, 85, 1);
+    color: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  max-width: 1920px;
+
+  &__logo {
+    width: 25%;
+  }
+}
+
+.pictures {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.picture {
+  position: absolute;
+
+  &__sam {
+    --bottom-position: 0;
+    bottom: -100%;
+    left: 90px;
+    z-index: 100;
+    width: 37%;
+    animation: appear 1s ease-out forwards;
+  }
+
+  &__pyramid {
+    bottom: 50px;
+    left: -370px;
+    width: 96%;
+    z-index: 99;
+  }
+
+  &__statue {
+    bottom: -90px;
+    left: -75px;
+    z-index: 100;
+    width: 11%;
+  }
+
+  &__footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+    z-index: 99;
+  }
+
+  &__snow {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    animation: snow 30s linear infinite;
+  }
+
+  &__projector {
+    rotate: var(--rotate-start);
+    width: 27%;
+    transform-origin: bottom center;
+    z-index: 98;
+    animation: projector 4s linear infinite;
+  }
+
+  &__projector--1 {
+    --rotate-start: 340deg;
+    bottom: 770px;
+    left: 50px;
+  }
+  &__projector--2 {
+    --rotate-start: 30deg;
+    bottom: 770px;
+    left: 100px;
+  }
+  &__projector--3 {
+    --rotate-start: 30deg;
+    bottom: 160px;
+    left: 910px;
+  }
+
+  &__fireworks {
+    width: 26%;
+  }
+
+  &__fireworks--1 {
+    bottom: 390px;
+    left: 450px;
+    z-index: 98;
+    animation: fireworks 3s linear infinite;
+  }
+  &__fireworks--2 {
+    bottom: 110px;
+    left: 810px;
+    z-index: 98;
+    animation: fireworks 2s linear infinite;
+  }
+  &__fireworks--3 {
+    bottom: -40px;
+    left: 1400px;
+    z-index: 98;
+    animation: fireworks 5s linear infinite;
+  }
+  &__fireworks--4 {
+    bottom: 100px;
+    left: 1700px;
+    z-index: 98;
+    animation: fireworks 4.5s linear infinite;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 100px;
+  right: 80px;
+  width: 675px;
+  z-index: 102;
+
+  &__title {
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 5px 25px;
+    background-color: rgba(255, 38, 126, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &__italic {
+    font-family: Wulkan Display;
+  }
+
+  &__benefit {
+    color: white;
+    font-size: 77px;
+    font-weight: 600;
+    line-height: 100px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  &__benefit--italic {
+    font-family: Wulkan Display;
+    color: rgba(255, 38, 126, 1);
+  }
+
+  &__adds {
+    font-family: Suisse Int;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 70px;
+  }
+
+  &__add1 {
+    text-align: left;
+  }
+  &__add2 {
+    padding: 16px 21px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1.72px solid rgba(237, 237, 237, 1);
+    background-color: rgba(255, 38, 126, 1);
+    border-radius: 50%;
+  }
+  &__add3 {
+    text-align: right;
+  }
+  &__button-container {
+    position: relative;
+  }
+  &__button {
+    position: relative;
+    display: inline-block;
+    padding: 30px 55px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.13px;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    background-color: rgba(5, 196, 137, 1);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__button.snake-border:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 38, 126, 1);
+  }
+
+  &__button.snake-border:hover::before,
+  &__button.snake-border:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    outline: 9px solid rgba(255, 38, 126, 1);
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__button.snake-border:hover::before {
+    animation-name: snake-border-head;
+  }
+
+  &__button.snake-border:hover::after {
+    animation-name: snake-border-tail;
+  }
+}
+
+@media (max-width: 1366px) {
+  .info {
+    width: 480px;
+
+    &__title {
+      font-size: 42px;
+      line-height: 72px;
+      padding: 5px 10px;
+    }
+    &__benefit {
+      font-size: 55px;
+      line-height: 72px;
+    }
+    &__adds {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    &__add2 {
+      font-size: 15px;
+      line-height: 15px;
+      padding: 10px 14px;
+    }
+    &__button {
+      font-size: 18px;
+      line-height: 23.35px;
+      padding: 21px 38px;
+    }
+  }
+
+  .picture {
+    &__pyramid {
+      bottom: 30px;
+      left: -240px;
+    }
+    &__statue {
+      left: -50px;
+    }
+    &__fireworks--1 {
+      bottom: 280px;
+      left: 350px;
+    }
+    &__fireworks--2 {
+      bottom: 50px;
+      left: 590px;
+    }
+    &__fireworks--3 {
+      bottom: 0;
+      left: 1000px;
+      width: 245px;
+    }
+    &__fireworks--4 {
+      bottom: 100px;
+      left: 1200px;
+      width: 191px;
+    }
+    &__projector--1 {
+      bottom: 570px;
+    }
+    &__projector--2 {
+      bottom: 570px;
+    }
+    &__projector--3 {
+      bottom: 100px;
+      left: 750px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .info {
+    top: 40px;
+    right: 30px;
+    align-items: end;
+    width: 436px;
+    &__title {
+      font-size: 38px;
+      line-height: 60px;
+    }
+    &__benefit {
+      text-align: end;
+      font-size: 50px;
+      line-height: 65px;
+    }
+    &__adds {
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0;
+      margin-left: 100px;
+    }
+    &__button {
+      font-size: 16px;
+      line-height: 20.75px;
+    }
+  }
+  .picture {
+    &__sam {
+      width: 456px;
+      left: 10px;
+    }
+    &__pyramid {
+      bottom: 35px;
+      left: -235px;
+      width: 1155px;
+    }
+    &__statue {
+      left: 0;
+      bottom: -60px;
+    }
+    &__projector--1 {
+      bottom: 490px;
+    }
+    &__projector--2 {
+      bottom: 490px;
+    }
+    &__projector--3 {
+      left: 560px;
+      bottom: 200px;
+    }
+
+    &__fireworks--1 {
+      bottom: 300px;
+      left: 280px;
+    }
+    &__fireworks--2 {
+      display: none;
+    }
+    &__fireworks--3 {
+      width: 220px;
+      left: 770px;
+      bottom: 20px;
+    }
+    &__fireworks--4 {
+      width: 166px;
+      left: 940px;
+      bottom: 80px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    width: 277px;
+  }
+  .info {
+    top: 90px;
+  }
+  .picture {
+    &__pyramid {
+      width: 1360px;
+      left: -450px;
+    }
+    &__footer {
+      width: 1000px;
+    }
+    &__sam {
+      width: 525px;
+      left: -100px;
+    }
+    &__projector {
+      width: 373px;
+    }
+    &__projector--1 {
+      left: -15px;
+    }
+    &__projector--2 {
+      left: 20px;
+    }
+    &__projector--3 {
+      left: 300px;
+      bottom: 320px;
+    }
+    &__fireworks--1 {
+      width: 267px;
+      bottom: 650px;
+      left: -60px;
+    }
+    &__fireworks--2 {
+      display: block;
+      width: 267px;
+      bottom: 350px;
+      left: 300px;
+    }
+    &__fireworks--3 {
+      width: 160px;
+      left: 600px;
+      bottom: 180px;
+    }
+    &__fireworks--4 {
+      width: 166px;
+      left: 640px;
+      bottom: 350px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .picture {
+      &__projector--1 {
+        display: none;
+      }
+      &__projector--2 {
+        display: none;
+      }
+      &__fireworks--3 {
+        display: none;
+      }
+      &__fireworks--4 {
+        display: none;
+      }
+      &__footer {
+        display: none;
+      }
+      &__statue {
+        display: none;
+      }
+      &__sam {
+        width: 316px;
+        left: -65px;
+        --bottom-position: 80px;
+      }
+      &__pyramid {
+        width: 736px;
+        left: -252px;
+        bottom: 79px;
+      }
+      &__fireworks--1 {
+        width: 160px;
+        bottom: 340px;
+        left: -65px;
+      }
+      &__fireworks--2 {
+        width: 200px;
+        bottom: 140px;
+        left: 184px;
+      }
+    }
+
+    .header__logo {
+      width: 184px;
+    }
+
+    .info {
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 80px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      gap: 14px;
+
+      &__title {
+        font-size: 23px;
+        line-height: 32px;
+      }
+      &__benefit {
+        font-size: 39px;
+        line-height: 48px;
+        text-align: center;
+      }
+      &__adds {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 25px;
+      }
+      &__button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        background-color: rgba(1, 1, 85, 1);
+        margin-top: auto;
+      }
+      &__button {
+        display: block;
+        font-size: 18px;
+        line-height: 23.35px;
+        padding: 15px 70px;
+      }
+    }
+  }
+}

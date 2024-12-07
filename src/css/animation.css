@@ -1,0 +1,165 @@
+@keyframes projector {
+    0% {
+      transform: rotate(var(--rotate-start));
+    }
+    50% {
+      transform: rotate(calc(var(--rotate-start) - 20deg));
+    }
+    100% {
+      transform: rotate(var(--rotate-start));
+    }
+  }
+  @keyframes fireworks {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      scale: 1.1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes snow {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  @keyframes appear {
+    from {
+      bottom: -100%;
+    }
+    to {
+      bottom: var(--bottom-position);
+    }
+  }
+  @keyframes snake-border-head {
+    90% {
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 40%;
+    }
+    90% {
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+    }
+    100% {
+      left: 0;
+      top: 0;
+      width: 40%;
+      height: 0;
+    }
+    0% {
+      left: 0;
+      top: 0;
+      width: 40%;
+      height: 0;
+    }
+    15% {
+      left: 60%;
+      top: 0;
+      width: 40%;
+      height: 0;
+    }
+    15% {
+      left: 100%;
+      top: 0;
+      width: 0;
+      height: 0;
+    }
+    25% {
+      left: 100%;
+      top: 0;
+      width: 0;
+      height: 40%;
+    }
+    40% {
+      left: 100%;
+      top: 60%;
+      width: 0;
+      height: 40%;
+    }
+    40% {
+      left: 100%;
+      top: 100%;
+      width: 0;
+      height: 0;
+    }
+    50% {
+      left: 60%;
+      top: 100%;
+      width: 40%;
+      height: 0;
+    }
+    65% {
+      left: 0;
+      top: 100%;
+      width: 40%;
+      height: 0;
+    }
+    65% {
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 0;
+    }
+    75% {
+      left: 0;
+      top: 60%;
+      width: 0;
+      height: 40%;
+    }
+  }
+  @keyframes snake-border-tail {
+    90% {
+      top: 0%;
+      height: 40%;
+    }
+    100% {
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+    }
+    0% {
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+    }
+    15% {
+      width: 40%;
+    }
+    25% {
+      left: 100%;
+      top: 0;
+      width: 0;
+      height: 0;
+    }
+    40% {
+      height: 40%;
+    }
+    50% {
+      left: 100%;
+      top: 100%;
+      width: 0;
+      height: 0;
+    }
+    65% {
+      left: 0%;
+      width: 40%;
+    }
+    75% {
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 0;
+    }
+  }

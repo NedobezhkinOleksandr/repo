@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Favbet Test Task
+    link(rel="stylesheet", href="src/css/normalize.css")
+    link(rel="stylesheet", href="src/css/index.css")
+    link(rel="stylesheet", href="src/css/animation.css")
+  body
+    header.header
+      img.header__logo(src="src/img/logo.png", alt="")
+    
+    main.main
+      section.pictures
+        - 
+          var images = [
+            { class: 'picture__sam', src: 'sam.png' },
+            { class: 'picture__pyramid', src: 'pyramid.png' },
+            { class: 'picture__statue', src: 'statue.png' },
+            { class: 'picture__footer', src: 'footer.png' },
+            { class: 'picture__snow', src: 'snow.png' },
+            { class: 'picture__projector picture__projector--1', src: 'Projector.png' },
+            { class: 'picture__projector picture__projector--2', src: 'Projector.png' },
+            { class: 'picture__projector picture__projector--3', src: 'Projector.png' },
+            { class: 'picture__fireworks picture__fireworks--1', src: 'fireworks-XL.png' },
+            { class: 'picture__fireworks picture__fireworks--2', src: 'fireworks-L.png' },
+            { class: 'picture__fireworks picture__fireworks--3', src: 'fireworks-M.png' },
+            { class: 'picture__fireworks picture__fireworks--4', src: 'fireworks-S.png' }
+          ]
+        each image in images
+          if image.class !== 'picture__statue'
+            picture
+              source(srcset=`src/img/${image.src} 1x, src/img/${image.src.replace('.png', '.svg')} 2x, src/img/${image.src.replace('.png', '.svg')} 3x`, type="image/png")
+              img.picture(class=image.class, alt="")
+          else
+            picture
+              source(srcset=`src/img/${image.src} 1x, src/img/${image.src.replace('.png', '.svg')} 2x, src/img/${image.src.replace('.png', '.svg')} 3x`, type="image/png")
+              img.picture(class=image.class, src=`src/img/${image.src}`, alt="")
+      
+      section.info
+        h1.info__title
+          | Orașul 
+          span.info__italic distracției
+        div.info__benefits
+          p.info__benefit
+            | BONUS 
+            span.info__benefit--italic 100%
+          p.info__benefit
+            | PÂNĂ LA 
+            span.info__benefit--italic 1000 lei
+        div.info__adds
+          div.info__add1 PARIU FĂRĂ RISC 100 LEI
+          div.info__add2 +
+          div.info__add3 100 ROTIRI GRATUITE
+        div.info__button-container
+          button.info__button.snake-border REVENDICĂ BONUSUL
